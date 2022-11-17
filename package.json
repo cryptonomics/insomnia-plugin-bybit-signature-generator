@@ -1,0 +1,13 @@
+{
+  "name": "bybit-signature-generator",
+  "version": "0.0.1",
+  "private": true,
+  "insomnia": {
+    "name": "bybit-signature-generator",
+    "description": ""
+  },
+  "main": "main.js",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}

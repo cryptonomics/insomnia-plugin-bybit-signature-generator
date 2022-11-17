@@ -1,9 +1,10 @@
 {
-  "name": "bybit-signature-generator",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@dogecash/insomnia-plugin-bybit-signature-generator",
+  "version": "1.0",
+  "private": false,
+  "repository": "https://github.com/DogeCash-Labs/insomnia-plugin-bybit-signature-generator.git",
   "insomnia": {
-    "name": "bybit-signature-generator",
+    "name": "insomnia-plugin-bybit-signature-generator",
     "description": ""
   },
   "main": "main.js",

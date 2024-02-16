@@ -28,6 +28,7 @@ module.exports.requestHooks = [
         let signBase = '';
         const timestamp = request.getHeader('X-BAPI-TIMESTAMP');
         const apikey = request.getHeader('X-BAPI-API-KEY');
+        const recvWindow = request.getHeader('X-BAPI-RECV-WINDOW');
         let parameters = '';
 
         switch(request.getMethod()){
@@ -35,10 +36,10 @@ module.exports.requestHooks = [
                 parameters = request.getParameters();
                 let params = [];
                 for (const p of parameters) { params.push(`${p.name}=${p.value}`) };
-                signBase = timestamp + apikey + params.join('&');
+                signBase = timestamp + apikey + recvWindow + params.join('&');
                 break;
             default:
-                signBase = timestamp + apikey + request.getBody().text;
+                signBase = timestamp + apikey + recvWindow + request.getBody().text;
                 break;
         }
 
